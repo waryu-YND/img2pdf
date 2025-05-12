@@ -1,0 +1,28 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>img2pdf</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>📸 画像を圧縮してPDFに</h1>
+
+      <div class="thumbnail-strip">
+        <div class="thumbnails"></div>
+      </div>
+
+      <div class="actions">
+        <label class="file-input-label">
+          <input type="file" id="fileInput" accept="image/*" multiple />
+          <span>画像を選択する</span>
+        </label>
+        <button id="makePdf" class="btn" disabled>PDFを生成</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
