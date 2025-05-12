@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <title>img2pdf</title>
     <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   </head>
   <body>
@@ -20,6 +21,11 @@
           <input type="file" id="fileInput" accept="image/*" multiple />
           <span>画像を選択する</span>
         </label>
+
+        <div class="filename-input">
+          <input type="text" id="fileName" placeholder="ダウンロード名を入力" />
+        </div>
+
         <button id="makePdf" class="btn" disabled>PDFを生成</button>
       </div>
     </div>

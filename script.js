@@ -1,5 +1,6 @@
 const input = document.getElementById("fileInput");
 const btn = document.getElementById("makePdf");
+const fileNameEl = document.getElementById("fileName");
 const thumbStrip = document.querySelector(".thumbnails");
 let rafId;
 const SPEED = 60;
@@ -115,6 +116,8 @@ btn.addEventListener("click", async () => {
     pdf.addImage(dataUrl, "JPEG", x, y, imgW, imgH);
     if (i < files.length - 1) pdf.addPage();
   }
+  const name = fileNameEl.value.trim() || "images.pdf";
+  const filename = name.toLowerCase().endsWith(".pdf") ? name : `${name}.pdf`;
 
-  pdf.save("images_centered.pdf");
+  pdf.save(filename);
 });
